@@ -1,4 +1,13 @@
-age_year = int(input("enter your age or date of year:\n"))
+age_year = int(input("Enter your age or date of year:\n"))
+current_year = int(input("Enter your current year:\n"))
+
+if len(str(age_year)) == 2 and age_year > 150:
+    print("You are oldest living being in the world")
+    exit()
+elif age_year > current_year:
+    print("You are not born yet")
+    exit()
+
 if len(str(age_year)) == 4:
     if len(str(age_year)) > 2021:
         print("You are from future")
@@ -23,4 +32,4 @@ if add_option == "y":
     real_age = age_will_year + will_know_age
     print(real_age)
 else:
-    pass
+    exit()
